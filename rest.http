@@ -1,0 +1,52 @@
+
+POST   http://localhost:4300/api/signup  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "firstName":"krishana",
+    "lastName":"krishana",
+    "username":"radhe",
+    "email":"radhe@gmail.com",
+    "password":"krishana",
+    "role":"admin",
+    "contactNumber":"7786210503",
+    "profilePicture":"not"
+}
+
+
+######### signin
+POST      http://localhost:4300/api/signin  HTTP/1.1
+Content-Type: application/json 
+
+{
+    "email":"radhe@gmail.com",
+    "password":"krishana"
+}
+
+######### products
+
+GET  http://localhost:4300/api/products HTTP/1.1
+Content-Type: application/json 
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTA3MGY4NmZkNzQ3ZTM3MzY1Y2E0MjMiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5NTgxMDc0NywiZXhwIjoxNjk4NDAyNzQ3fQ.05cnrOZXrKkG5WNcblUlLa3stEMRezOxNkmiK0aPw68
+
+
+
+
+######### products
+
+GET  http://localhost:4300/api/contact HTTP/1.1
+Content-Type: application/json 
+token:;lk'l';l';l;'l
+
+
+
+
+
+######### signout
+POST      http://localhost:4300/api/signout  HTTP/1.1
+Content-Type: application/json 
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkMmZmMTRlYzgyYzFjM2I0NThkN2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5NjQxNTU0NywiZXhwIjoxNjk5MDA3NTQ3fQ.7Q2k6-w3HbjBtfq_iRj_CX5zRqj353wz3SFB2Rjd85E
+
+
+
+

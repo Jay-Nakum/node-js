@@ -84,7 +84,6 @@ const signOut = async (req, res) => {
    const update = { token: '' }
    const options = { new: true };
    const data =    await  User.findByIdAndUpdate(id,update,options);
- console.log(data,"data")
     res
     .status(200)
     .json({ message: "User LoggedOut Successfully" });

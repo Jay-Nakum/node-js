@@ -1,16 +1,19 @@
 const Product = require("../models/product");
 const createErrore = require("http-errors");
 const Mongoose = require("mongoose");
+const { StatusCodes } = require("http-status-codes");
 
 module.exports = {
   getallproducts: async (req, res, next) => {
-    // next(new Error("url is not hsted on server"));
     try {
-      const result = await Product.find({}, { __v: 0 });
+      const result = await Product.find({ userID: req.user });
       res.send(result);
     } catch (error) {
-      console.log(error);
+      res
+        .status(StatusCodes.BAD_REQUEST)
+        .json({ error: "something went wrong" });
     }
+    next()
   },
 
   addnewProduct: async (req, res, next) => {
@@ -18,7 +21,6 @@ module.exports = {
       const product = new Product(req.body);
       const result = await product.save();
       res.send(result);
-      console.log(result);
     } catch (error) {
       if (error.name === "ValidationError") {
         next(createErrore(422, error.message));
@@ -36,7 +38,6 @@ module.exports = {
       }
       res.send(result);
     } catch (error) {
-      console.log(error);
       if (error instanceof Mongoose.CastError) {
         next(createErrore(400, "Invalid Product ID"));
         return;
@@ -55,7 +56,6 @@ module.exports = {
       }
       res.send(result);
     } catch (error) {
-      console.log(error);
       if (error instanceof Mongoose.CastError) {
         next(createErrore(400, "Invalid Product ID"));
         return;
@@ -74,7 +74,6 @@ module.exports = {
       }
       res.send(result);
     } catch (error) {
-      console.log(error);
       if (error instanceof Mongoose.CastError) {
         next(createErrore(400, "Invalid Product ID"));
         return;

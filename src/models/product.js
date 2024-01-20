@@ -10,6 +10,9 @@ const productSchema = new Schema({
     type: Number,
     required: true,
   },
+  description: {
+    type: String,
+  },
 });
 
 const product = mongoose.model("product", productSchema);

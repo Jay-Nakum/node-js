@@ -3,13 +3,13 @@ POST   http://localhost:4300/api/signup  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "firstName":"krishana",
-    "lastName":"krishana",
-    "username":"radhe",
-    "email":"radhe@gmail.com",
-    "password":"krishana",
+    "firstName":"rajes",
+    "lastName":"sharma",
+    "username":"rsm",
+    "email":"rajesh@gmail.com",
+    "password":"rsm345",
     "role":"admin",
-    "contactNumber":"7786210503",
+    "contactNumber":"9586110306",
     "profilePicture":"not"
 }
 
@@ -19,24 +19,56 @@ POST      http://localhost:4300/api/signin  HTTP/1.1
 Content-Type: application/json 
 
 {
-    "email":"radhe@gmail.com",
-    "password":"krishana"
+    "email":"rajesh@gmail.com",
+    "password":"rsm345"
 }
 
 ######### products
 
 GET  http://localhost:4300/api/products HTTP/1.1
 Content-Type: application/json 
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTA3MGY4NmZkNzQ3ZTM3MzY1Y2E0MjMiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5NTgxMDc0NywiZXhwIjoxNjk4NDAyNzQ3fQ.05cnrOZXrKkG5WNcblUlLa3stEMRezOxNkmiK0aPw68
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkMmZmMTRlYzgyYzFjM2I0NThkN2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc0NzI1MiwiZXhwIjoxNzA1ODMzNjUyfQ.vuKwLQfnuwVeMdRH7urQZl769NMenyW1gFX_oqp3Ug4
+
+
+######### addNewProducts
+
+POST   http://localhost:4300/api/products HTTP/1.1
+Content-Type: application/json 
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkMmZmMTRlYzgyYzFjM2I0NThkN2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc0NzI1MiwiZXhwIjoxNzA1ODMzNjUyfQ.vuKwLQfnuwVeMdRH7urQZl769NMenyW1gFX_oqp3Ug4
+
+{
+    "name":"cherry",
+    "price":45
+}
 
 
 
 
-######### products
+
+
+######### addNew contact
+
+POST   http://localhost:4300/api/contact HTTP/1.1
+Content-Type: application/json 
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFiYzM3NjBiZjg1MWMwYWFiYmM2ZGIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc1NTUzNCwiZXhwIjoxNzA1ODQxOTM0fQ.qmV05EZG9pQkoP7lcy-mQ9-FwVcRPPT3YRaVgCJo6_4
+
+{
+    "name":"rjsml",
+    "phone":"7786210503"
+}
+
+
+
+
+
+
+
+
+######### contacts
 
 GET  http://localhost:4300/api/contact HTTP/1.1
 Content-Type: application/json 
-token:;lk'l';l';l;'l
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFiYzM3NjBiZjg1MWMwYWFiYmM2ZGIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc1NTUzNCwiZXhwIjoxNzA1ODQxOTM0fQ.qmV05EZG9pQkoP7lcy-mQ9-FwVcRPPT3YRaVgCJo6_4
 
 
 
@@ -45,8 +77,25 @@ token:;lk'l';l';l;'l
 ######### signout
 POST      http://localhost:4300/api/signout  HTTP/1.1
 Content-Type: application/json 
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkMmZmMTRlYzgyYzFjM2I0NThkN2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTY5NjQxNTU0NywiZXhwIjoxNjk5MDA3NTQ3fQ.7Q2k6-w3HbjBtfq_iRj_CX5zRqj353wz3SFB2Rjd85E
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkMmZmMTRlYzgyYzFjM2I0NThkN2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc1MTIyOSwiZXhwIjoxNzA1ODM3NjI5fQ.qhbG-jZxdNDcfDmebrV93D9Qfpzf6m3Je4Vp7iwg5I4
 
 
 
 
+######### selectedProducts add
+
+POST    http://localhost:4300/api/selected/65abbaf3abc395a6892a9f08 HTTP/1.1
+Content-Type: application/json 
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFkMmZmMTRlYzgyYzFjM2I0NThkN2QiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc1MTIyOSwiZXhwIjoxNzA1ODM3NjI5fQ.qhbG-jZxdNDcfDmebrV93D9Qfpzf6m3Je4Vp7iwg5I4
+
+{
+    "name":"cherry",
+    "price":45
+}
+
+
+######### selectedProducts get
+
+GET     http://localhost:4300/api/selected HTTP/1.1
+Content-Type: application/json 
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWFiYzM3NjBiZjg1MWMwYWFiYmM2ZGIiLCJyb2xlIjoidXNlciIsImlhdCI6MTcwNTc1NTUzNCwiZXhwIjoxNzA1ODQxOTM0fQ.qmV05EZG9pQkoP7lcy-mQ9-FwVcRPPT3YRaVgCJo6_4

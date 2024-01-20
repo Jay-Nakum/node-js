@@ -6,9 +6,17 @@ var cors = require("cors");
 const authRouter = require("./routes/auth");
 const productRouter = require("./routes/product");
 const contactRouter = require("./routes/contact.routes");
+const selectedProductRouter = require("./routes/selectedProducts.routes");
+
 app.use(cors());
 app.use(express.json());
-app.use("/api", authRouter, productRouter, contactRouter);
+app.use(
+  "/api",
+  authRouter,
+  productRouter,
+  contactRouter,
+  selectedProductRouter
+);
 const port = process.env.PORT || 5000;
 const start = async () => {
   try {

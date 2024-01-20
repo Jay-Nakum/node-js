@@ -7,7 +7,7 @@ const verifyToken = async (req, res, next) => {
 
   try {
     if (!token) {
-     return res.status(401).send({ succes: false, msg: "token is reqired" });
+     return res.status(401).send({ succes: false, msg: "token is reqired !!" });
     } else {
       const decode = jwt.verify(token, key);
       const id = decode._id;
